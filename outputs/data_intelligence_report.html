@@ -1,0 +1,467 @@
+
+        <html>
+        <head>
+            <title>Data Intelligence Report</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; }
+                h1, h2 { color: #333; }
+                table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+                th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+                th { background-color: #4CAF50; color: white; }
+                tr:nth-child(even) { background-color: #f2f2f2; }
+                .summary { background-color: #e3f2fd; padding: 10px; border-radius: 4px; }
+                .high-missing { background-color: #ffcccc; }
+                .outliers { background-color: #ffffcc; }
+            </style>
+        </head>
+        <body>
+            <h1>Data Intelligence Report</h1>
+            
+            <h2>Column Profiles</h2>
+            <table>
+                <tr>
+                    <th>Column</th>
+                    <th>Data Type</th>
+                    <th>Non-Null %</th>
+                    <th>Unique</th>
+                    <th>Mean</th>
+                    <th>Median</th>
+                    <th>Std Dev</th>
+                    <th>Min</th>
+                    <th>Max</th>
+                    <th>Skewness</th>
+                </tr>
+        
+                <tr>
+                    <td><strong>credit_score_band</strong></td>
+                    <td>float64</td>
+                    <td>0.0%</td>
+                    <td>0</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>current_balance</strong></td>
+                    <td>float64</td>
+                    <td>100.0%</td>
+                    <td>66632</td>
+                    <td>295557.85</td>
+                    <td>296738.23</td>
+                    <td>114355.39</td>
+                    <td>96245.36</td>
+                    <td>499929.77</td>
+                    <td>0.00</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>current_status</strong></td>
+                    <td>float64</td>
+                    <td>0.0%</td>
+                    <td>0</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>days_past_due</strong></td>
+                    <td>int64</td>
+                    <td>100.0%</td>
+                    <td>180</td>
+                    <td>23.40</td>
+                    <td>0.00</td>
+                    <td>45.19</td>
+                    <td>0.00</td>
+                    <td>179.00</td>
+                    <td>1.73</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>default_flag</strong></td>
+                    <td>boolean</td>
+                    <td>100.0%</td>
+                    <td>2</td>
+                    <td>0.03</td>
+                    <td>0.00</td>
+                    <td>0.17</td>
+                    <td>0.00</td>
+                    <td>1.00</td>
+                    <td>N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>document_status</strong></td>
+                    <td>float64</td>
+                    <td>0.0%</td>
+                    <td>0</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>dti_band</strong></td>
+                    <td>float64</td>
+                    <td>0.0%</td>
+                    <td>0</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>exception_required</strong></td>
+                    <td>int64</td>
+                    <td>100.0%</td>
+                    <td>2</td>
+                    <td>0.13</td>
+                    <td>0.00</td>
+                    <td>0.34</td>
+                    <td>0.00</td>
+                    <td>1.00</td>
+                    <td>2.17</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>exception_type</strong></td>
+                    <td>float64</td>
+                    <td>0.0%</td>
+                    <td>0</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>interest_rate</strong></td>
+                    <td>float64</td>
+                    <td>100.0%</td>
+                    <td>10000</td>
+                    <td>5.00</td>
+                    <td>5.01</td>
+                    <td>1.45</td>
+                    <td>2.50</td>
+                    <td>7.50</td>
+                    <td>-0.00</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>last_updated_at</strong></td>
+                    <td>datetime64[ns]</td>
+                    <td>100.0%</td>
+                    <td>2092</td>
+                    <td>1601656484620002048.00</td>
+                    <td>1601769600000000000.00</td>
+                    <td>45500070790891336.00</td>
+                    <td>1514764800000000000.00</td>
+                    <td>1698796800000000000.00</td>
+                    <td>0.00</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>loan_age_months</strong></td>
+                    <td>int64</td>
+                    <td>100.0%</td>
+                    <td>12</td>
+                    <td>4.63</td>
+                    <td>4.00</td>
+                    <td>2.83</td>
+                    <td>1.00</td>
+                    <td>12.00</td>
+                    <td>0.53</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>loan_id</strong></td>
+                    <td>int64</td>
+                    <td>100.0%</td>
+                    <td>10000</td>
+                    <td>4991.13</td>
+                    <td>4999.00</td>
+                    <td>2893.96</td>
+                    <td>1.00</td>
+                    <td>10000.00</td>
+                    <td>-0.00</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>loan_purpose</strong></td>
+                    <td>float64</td>
+                    <td>0.0%</td>
+                    <td>0</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>loss_severity_band</strong></td>
+                    <td>float64</td>
+                    <td>0.0%</td>
+                    <td>0</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>ltv_band</strong></td>
+                    <td>float64</td>
+                    <td>0.0%</td>
+                    <td>0</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>modification_flag</strong></td>
+                    <td>boolean</td>
+                    <td>100.0%</td>
+                    <td>2</td>
+                    <td>0.05</td>
+                    <td>0.00</td>
+                    <td>0.22</td>
+                    <td>0.00</td>
+                    <td>1.00</td>
+                    <td>N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>month_index</strong></td>
+                    <td>int64</td>
+                    <td>100.0%</td>
+                    <td>12</td>
+                    <td>3.63</td>
+                    <td>3.00</td>
+                    <td>2.83</td>
+                    <td>0.00</td>
+                    <td>11.00</td>
+                    <td>0.53</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>next_12m_default_flag</strong></td>
+                    <td>boolean</td>
+                    <td>100.0%</td>
+                    <td>2</td>
+                    <td>0.13</td>
+                    <td>0.00</td>
+                    <td>0.33</td>
+                    <td>0.00</td>
+                    <td>1.00</td>
+                    <td>N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>next_12m_prepayment_flag</strong></td>
+                    <td>boolean</td>
+                    <td>100.0%</td>
+                    <td>2</td>
+                    <td>0.08</td>
+                    <td>0.00</td>
+                    <td>0.27</td>
+                    <td>0.00</td>
+                    <td>1.00</td>
+                    <td>N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>next_3m_delinquency_flag</strong></td>
+                    <td>boolean</td>
+                    <td>100.0%</td>
+                    <td>2</td>
+                    <td>0.24</td>
+                    <td>0.00</td>
+                    <td>0.43</td>
+                    <td>0.00</td>
+                    <td>1.00</td>
+                    <td>N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>next_6m_delinquency_flag</strong></td>
+                    <td>boolean</td>
+                    <td>100.0%</td>
+                    <td>2</td>
+                    <td>0.28</td>
+                    <td>0.00</td>
+                    <td>0.45</td>
+                    <td>0.00</td>
+                    <td>1.00</td>
+                    <td>N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>next_state</strong></td>
+                    <td>float64</td>
+                    <td>0.0%</td>
+                    <td>0</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>occupancy_type</strong></td>
+                    <td>float64</td>
+                    <td>0.0%</td>
+                    <td>0</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>original_balance</strong></td>
+                    <td>float64</td>
+                    <td>100.0%</td>
+                    <td>10000</td>
+                    <td>299173.90</td>
+                    <td>300501.46</td>
+                    <td>115701.64</td>
+                    <td>100038.97</td>
+                    <td>499929.77</td>
+                    <td>-0.00</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>origination_month</strong></td>
+                    <td>datetime64[ns]</td>
+                    <td>100.0%</td>
+                    <td>60</td>
+                    <td>1590847315836235008.00</td>
+                    <td>1590969600000000000.00</td>
+                    <td>44884040303919208.00</td>
+                    <td>1514764800000000000.00</td>
+                    <td>1669852800000000000.00</td>
+                    <td>-0.00</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>prepayment_flag</strong></td>
+                    <td>boolean</td>
+                    <td>100.0%</td>
+                    <td>2</td>
+                    <td>0.01</td>
+                    <td>0.00</td>
+                    <td>0.09</td>
+                    <td>0.00</td>
+                    <td>1.00</td>
+                    <td>N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>property_type</strong></td>
+                    <td>float64</td>
+                    <td>0.0%</td>
+                    <td>0</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>remaining_term_months</strong></td>
+                    <td>int64</td>
+                    <td>100.0%</td>
+                    <td>36</td>
+                    <td>256.96</td>
+                    <td>237.00</td>
+                    <td>75.18</td>
+                    <td>169.00</td>
+                    <td>360.00</td>
+                    <td>0.36</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>reporting_month</strong></td>
+                    <td>datetime64[ns]</td>
+                    <td>100.0%</td>
+                    <td>71</td>
+                    <td>1600384845239524352.00</td>
+                    <td>1601510400000000000.00</td>
+                    <td>45497838648800064.00</td>
+                    <td>1514764800000000000.00</td>
+                    <td>1698796800000000000.00</td>
+                    <td>0.00</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>servicer_name</strong></td>
+                    <td>float64</td>
+                    <td>0.0%</td>
+                    <td>0</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>source_system</strong></td>
+                    <td>float64</td>
+                    <td>0.0%</td>
+                    <td>0</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>state</strong></td>
+                    <td>float64</td>
+                    <td>0.0%</td>
+                    <td>0</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+            
+            </table>
+        </body>
+        </html>
+        
