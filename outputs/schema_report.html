@@ -1,0 +1,375 @@
+
+        <html>
+        <head>
+            <title>Schema Report: train.csv</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; }
+                h1, h2 { color: #333; }
+                table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+                th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+                th { background-color: #4CAF50; color: white; }
+                tr:nth-child(even) { background-color: #f2f2f2; }
+                .summary { background-color: #e3f2fd; padding: 10px; border-radius: 4px; }
+                .status-found { color: green; }
+                .status-missing { color: red; }
+                .status-unexpected { color: orange; }
+            </style>
+        </head>
+        <body>
+            <h1>Schema Discovery Report</h1>
+            <div class="summary">
+                <h2>Summary</h2>
+                <p><strong>File:</strong> train.csv</p>
+                <p><strong>Rows:</strong> 66,632</p>
+                <p><strong>Columns:</strong> 33</p>
+                <p><strong>Data Completeness:</strong> 100.0%</p>
+                <p><strong>Missing Expected Columns:</strong> 0</p>
+                <p><strong>Unexpected Columns:</strong> 7</p>
+            </div>
+            
+            <h2>Column Schema</h2>
+            <table>
+                <tr>
+                    <th>Column</th>
+                    <th>Pandas Type</th>
+                    <th>Inferred Type</th>
+                    <th>Unique</th>
+                    <th>Missing %</th>
+                    <th>Status</th>
+                    <th>Sample Values</th>
+                </tr>
+        
+                <tr>
+                    <td>loan_id</td>
+                    <td>int64</td>
+                    <td>int</td>
+                    <td>10000</td>
+                    <td>0.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td>1, 1, 1</td>
+                </tr>
+            
+                <tr>
+                    <td>month_index</td>
+                    <td>int64</td>
+                    <td>int</td>
+                    <td>12</td>
+                    <td>0.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td>0, 1, 2</td>
+                </tr>
+            
+                <tr>
+                    <td>reporting_month</td>
+                    <td>datetime64[ns]</td>
+                    <td>datetime64[ns]</td>
+                    <td>71</td>
+                    <td>0.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td>2018-01-01 00:00:00, 2018-02-01 00:00:00, 2018-03-01 00:00:00</td>
+                </tr>
+            
+                <tr>
+                    <td>origination_month</td>
+                    <td>datetime64[ns]</td>
+                    <td>datetime64[ns]</td>
+                    <td>60</td>
+                    <td>0.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td>2018-01-01 00:00:00, 2018-01-01 00:00:00, 2018-01-01 00:00:00</td>
+                </tr>
+            
+                <tr>
+                    <td>loan_age_months</td>
+                    <td>int64</td>
+                    <td>int</td>
+                    <td>12</td>
+                    <td>0.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td>1, 2, 3</td>
+                </tr>
+            
+                <tr>
+                    <td>remaining_term_months</td>
+                    <td>int64</td>
+                    <td>int</td>
+                    <td>36</td>
+                    <td>0.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td>360, 359, 358</td>
+                </tr>
+            
+                <tr>
+                    <td>original_balance</td>
+                    <td>float64</td>
+                    <td>float</td>
+                    <td>10000</td>
+                    <td>0.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td>278333.1011414365, 278333.1011414365, 278333.1011414365</td>
+                </tr>
+            
+                <tr>
+                    <td>current_balance</td>
+                    <td>float64</td>
+                    <td>float</td>
+                    <td>66632</td>
+                    <td>0.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td>278333.1011414365, 277638.47271128045, 277127.0340322388</td>
+                </tr>
+            
+                <tr>
+                    <td>interest_rate</td>
+                    <td>float64</td>
+                    <td>float</td>
+                    <td>10000</td>
+                    <td>0.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td>2.9998745790900143, 2.9998745790900143, 2.9998745790900143</td>
+                </tr>
+            
+                <tr>
+                    <td>credit_score_band</td>
+                    <td>float64</td>
+                    <td>float</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td></td>
+                </tr>
+            
+                <tr>
+                    <td>ltv_band</td>
+                    <td>float64</td>
+                    <td>float</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td></td>
+                </tr>
+            
+                <tr>
+                    <td>dti_band</td>
+                    <td>float64</td>
+                    <td>float</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td></td>
+                </tr>
+            
+                <tr>
+                    <td>state</td>
+                    <td>float64</td>
+                    <td>float</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td></td>
+                </tr>
+            
+                <tr>
+                    <td>loan_purpose</td>
+                    <td>float64</td>
+                    <td>float</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td></td>
+                </tr>
+            
+                <tr>
+                    <td>occupancy_type</td>
+                    <td>float64</td>
+                    <td>float</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td></td>
+                </tr>
+            
+                <tr>
+                    <td>property_type</td>
+                    <td>float64</td>
+                    <td>float</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td></td>
+                </tr>
+            
+                <tr>
+                    <td>servicer_name</td>
+                    <td>float64</td>
+                    <td>float</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td></td>
+                </tr>
+            
+                <tr>
+                    <td>current_status</td>
+                    <td>float64</td>
+                    <td>float</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td></td>
+                </tr>
+            
+                <tr>
+                    <td>days_past_due</td>
+                    <td>int64</td>
+                    <td>int</td>
+                    <td>180</td>
+                    <td>0.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td>62, 92, 119</td>
+                </tr>
+            
+                <tr>
+                    <td>modification_flag</td>
+                    <td>boolean</td>
+                    <td>bool</td>
+                    <td>2</td>
+                    <td>0.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td>True, False, False</td>
+                </tr>
+            
+                <tr>
+                    <td>prepayment_flag</td>
+                    <td>boolean</td>
+                    <td>bool</td>
+                    <td>2</td>
+                    <td>0.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td>False, False, False</td>
+                </tr>
+            
+                <tr>
+                    <td>default_flag</td>
+                    <td>boolean</td>
+                    <td>bool</td>
+                    <td>2</td>
+                    <td>0.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td>False, False, False</td>
+                </tr>
+            
+                <tr>
+                    <td>loss_severity_band</td>
+                    <td>float64</td>
+                    <td>float</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td></td>
+                </tr>
+            
+                <tr>
+                    <td>last_updated_at</td>
+                    <td>datetime64[ns]</td>
+                    <td>datetime64[ns]</td>
+                    <td>2092</td>
+                    <td>0.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td>2018-01-01 00:00:00, 2018-02-01 00:00:00, 2018-03-01 00:00:00</td>
+                </tr>
+            
+                <tr>
+                    <td>source_system</td>
+                    <td>float64</td>
+                    <td>float</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td></td>
+                </tr>
+            
+                <tr>
+                    <td>document_status</td>
+                    <td>float64</td>
+                    <td>float</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                    <td class="status-found">FOUND</td>
+                    <td></td>
+                </tr>
+            
+                <tr>
+                    <td>next_3m_delinquency_flag</td>
+                    <td>boolean</td>
+                    <td>bool</td>
+                    <td>2</td>
+                    <td>0.0%</td>
+                    <td class="status-unexpected">UNEXPECTED</td>
+                    <td>True, True, True</td>
+                </tr>
+            
+                <tr>
+                    <td>next_6m_delinquency_flag</td>
+                    <td>boolean</td>
+                    <td>bool</td>
+                    <td>2</td>
+                    <td>0.0%</td>
+                    <td class="status-unexpected">UNEXPECTED</td>
+                    <td>True, True, True</td>
+                </tr>
+            
+                <tr>
+                    <td>next_12m_default_flag</td>
+                    <td>boolean</td>
+                    <td>bool</td>
+                    <td>2</td>
+                    <td>0.0%</td>
+                    <td class="status-unexpected">UNEXPECTED</td>
+                    <td>True, True, True</td>
+                </tr>
+            
+                <tr>
+                    <td>next_12m_prepayment_flag</td>
+                    <td>boolean</td>
+                    <td>bool</td>
+                    <td>2</td>
+                    <td>0.0%</td>
+                    <td class="status-unexpected">UNEXPECTED</td>
+                    <td>False, False, False</td>
+                </tr>
+            
+                <tr>
+                    <td>next_state</td>
+                    <td>float64</td>
+                    <td>float</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                    <td class="status-unexpected">UNEXPECTED</td>
+                    <td></td>
+                </tr>
+            
+                <tr>
+                    <td>exception_required</td>
+                    <td>int64</td>
+                    <td>int</td>
+                    <td>2</td>
+                    <td>0.0%</td>
+                    <td class="status-unexpected">UNEXPECTED</td>
+                    <td>0, 1, 1</td>
+                </tr>
+            
+                <tr>
+                    <td>exception_type</td>
+                    <td>float64</td>
+                    <td>float</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                    <td class="status-unexpected">UNEXPECTED</td>
+                    <td></td>
+                </tr>
+            
+            </table>
+        </body>
+        </html>
+        

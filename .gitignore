@@ -1,0 +1,94 @@
+# Environment
+.env
+.env.local
+.env.*.local
+.streamlit/secrets.toml
+
+# Secrets and credentials
+*.key
+*.pem
+secrets/
+.credentials/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv
+venv/
+ENV/
+env/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Data
+data/raw/
+data/processed/
+!data/.gitkeep
+
+# Models and outputs
+models/*.pkl
+models/*.joblib
+models/*.cbm
+models/*.json
+outputs/
+reports/
+!outputs/.gitkeep
+!reports/.gitkeep
+
+# Logs
+*.log
+outputs/logs/
+!outputs/logs/.gitkeep
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# MLflow
+mlruns/
+.mlflow/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+.tmp/
+
+# OS
+Thumbs.db
+.DS_Store

@@ -1,0 +1,4 @@
+loan_id,current_status,days_past_due,current_balance,delinquency_prob,default_prob,prepayment_prob,risk_score,recommended_action
+1001,CURRENT,0,390000,0.0,0.020000000000000018,0.1,0.015,monitor
+1002,DELINQUENT,90,280000,0.2465753424657534,0.15999999999999998,0.1,0.3666,monitor
+1003,CURRENT,0,470000,0.0,0.04800000000000004,0.7,0.036,monitor

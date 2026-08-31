@@ -1,0 +1,15 @@
+{
+  "total_records": 66632,
+  "average_quality_score": 0.7,
+  "median_quality_score": 0.7,
+  "min_quality_score": 0.7,
+  "max_quality_score": 0.7,
+  "std_quality_score": 0.0,
+  "records_high_severity": 66632,
+  "records_medium_severity": 0,
+  "records_low_severity": 0,
+  "pct_high_severity": 1.0,
+  "pct_medium_severity": 0.0,
+  "pct_low_severity": 0.0,
+  "timestamp": "2026-08-31T01:35:36.292134"
+}

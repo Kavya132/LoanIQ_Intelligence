@@ -1,0 +1,86 @@
+# Loan Performance Intelligence Engine Configuration
+
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  mode: demo  # 'demo' or 'real'
+
+training:
+  random_seed: 42
+  test_size: 0.2
+  validation_months: 6
+  time_aware_split: true
+  
+models:
+  primary: catboost
+  baseline: logistic_regression
+  catboost:
+    iterations: 500
+    learning_rate: 0.05
+    depth: 7
+    verbose: false
+    task_type: CPU
+  xgboost:
+    n_estimators: 500
+    learning_rate: 0.05
+    max_depth: 7
+    use_label_encoder: false
+    eval_metric: logloss
+
+anomaly:
+  detector: isolation_forest
+  contamination: 0.02
+  n_estimators: 100
+  
+calibration:
+  enabled: true
+  method: sigmoid  # sigmoid or isotonic
+  
+simulation:
+  monte_carlo_runs: 1000
+  confidence_interval: [0.05, 0.95]
+  
+explainability:
+  shap_sample_size: 2000
+  use_shap: true
+  feature_importance_top_n: 20
+  
+llm:
+  enabled: true
+  provider: openai  # openai, claude, local
+  model: gpt-4-turbo  # configurable
+  max_tokens: 500
+  temperature: 0.7
+  log_prompts: true
+  grounding_enabled: true
+  
+feature_engineering:
+  temporal_features: true
+  balance_features: true
+  delinquency_features: true
+  servicer_features: true
+  polynomial_features: false
+  polynomial_degree: 2
+  
+class_imbalance:
+  strategy: class_weight  # class_weight, smote, none
+  
+leakage:
+  detection_enabled: true
+  check_future_features: true
+  check_target_leakage: true
+  
+data_quality:
+  min_completeness: 0.70  # 70% non-null
+  max_outlier_pct: 0.05   # 5% outliers max
+  require_target: false   # may not exist in test
+  
+paths:
+  models_dir: models
+  reports_dir: reports
+  outputs_dir: outputs
+  logs_dir: outputs/logs
+  
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
