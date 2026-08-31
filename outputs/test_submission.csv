@@ -1,3 +1,0 @@
-loan_id,predicted_default_probability,predicted_delinquency_probability,final_decision
-1,0.2,0.1,STANDARD_REVIEW
-2,0.8,0.7,APPROVE_WITH_REVIEW

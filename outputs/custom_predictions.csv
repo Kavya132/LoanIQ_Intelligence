@@ -1,4 +1,0 @@
-loan_id,current_balance,days_past_due,current_status,delinquency_prob,default_prob,prepayment_prob
-1001,390000,0,CURRENT,0.0,0.020000000000000018,0.1
-1002,280000,90,DELINQUENT,0.2465753424657534,0.15999999999999998,0.1
-1003,470000,0,CURRENT,0.0,0.04800000000000004,0.7
